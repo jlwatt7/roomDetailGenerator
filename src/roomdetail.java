@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class roomdetail {
 
+	static Scanner roomScan = new Scanner(System.in);
+	
 	public static void main(String[] args) {
 
 	// display a welcome message and add space above next prompt 
@@ -60,4 +62,15 @@ while (userContinue);
 		answer =  scanner.next();
 		return answer;
 	}
-}
+//validation
+		public static double readValidDoubleNoExp()
+		{ while (!roomScan.hasNextDouble()) {
+				roomScan.nextLine();
+				System.out.println("Please put a number, like NOW!");
+		}
+				double x = roomScan.nextDouble();
+				roomScan.nextLine();
+
+				return x;				
+		}//makes users enter valid number in range
+		}
